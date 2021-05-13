@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Where In The World?: Home</title>
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">Created By: Nathan Robinson</h2>
+            <div class="toggle"></div>
+        </header>
+
+        <video src="video.mp4" muted loop autoplay></video>
+        
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Where In The World</h2>
+            <h3>Location Quiz Game</h3>
+            <p>Think you know the difference between Berlin and Birkenhead? Test your knowledge of famous landmarks, flags and locations. Simply select your level of difficutly and enjoy.
+            </p>
+            <!-- still working through each game -->
+            <!-- mixed is working -->
+            <!-- flags been worked on currently -->
+            <a href="#"><span class="ready">Easy</span><span class="enter">Begin</span></a>
+            <a href="../mixed.html"><span class="ready">Mixed</span><span class="enter">Begin</span></a>
+            <a href="../hard.html"><span class="ready">Hard</span><span class="enter">Begin</span></a>
+            <a href="../flags.html"><span class="ready">Flags</span><span class="enter">Begin</span></a>
+        </div>
+
+        <ul class="social">
+            <li><a href="#"><img src="facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="instagram.png" alt=""></a></li>
+            <li><a href="#"><img src="twitter.png" alt=""></a></li>
+        </ul>
+    </section>
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Leaderboard</a></li>
+            <li><a href="#">Interesting Facts</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Coming Soon</a></li>
+        </ul>
+    </div>
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+        const logo = document.querySelector('.logo')
+
+        menuToggle.addEventListener('click', ()=>{
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+            if(showcase.classList == 'showcase active'){
+            showcase.style.paddingLeft = '400px';
+            logo.style.paddingLeft = '300px';
+            }else{
+                showcase.style.paddingLeft = '100px';
+                logo.style.paddingLeft = '0px';
+            }
+        });
+    </script>
+</body>
+</html>
